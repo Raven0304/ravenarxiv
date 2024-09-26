@@ -11,3 +11,4 @@ RANDOM_EMOJI() {
 
 # declare the terminal prompt format
 export PS1='$(RANDOM_EMOJI) ~ $ '
+klsklakslas
