@@ -1,0 +1,1036 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/lib/new_style/images/favicon.png" type="image/x-icon">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="https://coderthemes.com/velonic/plugins/morris/morris.css">
+
+    <!-- sweet alerts -->
+    <!-- <link href="https://coderthemes.com/velonic/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet"> -->
+
+    <link href="/lib/new_style/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css" rel="stylesheet"> -->
+
+    <!-- DataTables -->
+    <link href="/lib/new_style/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/new_style/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="/lib/new_style/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- App css -->
+    <link href="/lib/new_style/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/new_style/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/new_style/css/metismenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="/lib/new_style/css/app.css?v=3" rel="stylesheet" type="text/css" />
+    <!-- your custom css -->
+    <link href="/lib/new_style/css/style.css?v=1" rel="stylesheet" type="text/css" />
+
+    <script src="/lib/new_style/js/modernizr.min.js"></script>
+
+    <!-- jQuery  -->
+    <script src="/lib/new_style/js/jquery.min.js"></script>
+    <script src="/lib/new_style/js/pjax.js"></script>
+    <script src="/lib/new_style/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/new_style/js/metisMenu.min.js"></script>
+    <script src="/lib/new_style/js/waves.js"></script>
+    <script src="/lib/new_style/js/jquery.slimscroll.js"></script>
+    <script src="/lib/new_style/js/moment.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css?v=1" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js?v=1"></script>
+
+
+</head>
+
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+
+        <!-- Top Bar Start -->
+
+        
+<style>
+	.topbar .topbar-left {
+		background-color: #1a1c42 !important;
+	}
+
+	@media (max-width: 768px) {
+		.topbar-left {
+			display: none;
+		}
+
+		.navbar-custom {
+			margin-left: 0 !important;
+		}
+	}
+</style>
+
+
+<div class="topbar">
+
+	<!-- LOGO -->
+	<div class="topbar-left">
+		<a href="#" class="logo">
+			<span>
+				<img src="/lib/new_style/images/logo.png" alt="" height="42">
+			</span>
+			<i>
+				<img src="/lib/new_style/images/logo1.png" alt="" height="60">
+			</i>
+		</a>
+	</div>
+
+	<nav class="navbar-custom">
+
+		<ul class="list-inline float-right mb-0" style="padding: 15px 0;">
+
+			<!-- notification goes here -->
+
+			
+
+			<li class="list-inline-item dropdown notification-list">
+				<a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+					<!-- <i class=" fas fa-user-alt"></i> -->
+					<div style="width: 40px; height: 40px; overflow: hidden; border-radius: 30px; box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)!important;">
+						<img style="width:100%; 
+						margin-top: 0						" src="data:image/png;base64,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">
+					</div>
+					<!-- <span class="profile-username ml-2 text-dark">HÜSEYNLİ RƏVAN </span> <span class="mdi mdi-menu-down text-dark"></span> -->
+				</a>
+				<div class="dropdown-menu dropdown-menu-animated dropdown-menu-right profile-dropdown ">
+
+
+					<div style="margin: 10px auto; width: 80px; height: 80px; overflow: hidden; border-radius: 50px; border: 3px solid white; box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)!important;">
+						<img style="width:100%;" src="data:image/png;base64,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">
+					</div>
+
+
+					<!-- item-->
+					<div class="dropdown-item noti-title">
+						<h5 class="text-overflow"><small>İdentifikator<!-- 학번 --> : 202202034</small> </h5>
+						<h5 class="text-overflow"><small>Semestr<!-- 학기 --> : 2024İl</small> </h5>
+					</div>
+
+					<div class="profile-footer">
+
+						<!-- item-->
+						<a href="/telebe/info/student_view.php" data-pjax class="btn btn-primary">
+							<i class="fas fa-user"></i> Profil
+						</a>
+
+
+						<!-- item-->
+						<a href="/logout_proc.php" data-pjax class="btn btn-danger float-right">
+							<i class="fas fa-right-from-bracket"></i> Çıxış
+						</a>
+					</div>
+				</div>
+
+				<style>
+					.profile-dropdown {
+						width: 250px;
+					}
+
+					.profile-footer {
+						padding: 10px;
+					}
+				</style>
+
+
+			</li>
+
+		</ul>
+
+
+		
+<ul class="list-inline menu-center mb-0">
+				<li class="float-left">
+				<button class="custom-openSidebar button-menu-mobile"><i class="mdi mdi-menu"></i></button>
+				</li>
+			</ul>
+
+
+
+		
+
+
+
+	</nav>
+
+</div>
+        <!-- Top Bar End -->
+
+
+        <!-- ========== Left Sidebar Start ========== -->
+
+        <link rel=stylesheet type='text/css' href='/lib/skin/basic/css/style.css' title='style'>
+<style type="text/css">
+	td {white space:nowrap;}
+</style>
+
+<script language="javascript">  
+<!-- 
+	var openImg1 = "";
+	var closeImg1 = "";
+	var openImg2 = "";
+	var closeImg2 = "";
+	var openImg3 = "";
+	var closeImg3 = "";
+	var openImg4 = "";
+	var closeImg4 = "";
+	openImg1 = new Image;   
+	closeImg1 = new Image;
+	openImg2 = new Image;   
+	closeImg2 = new Image;
+	openImg3 = new Image;   
+	closeImg3 = new Image;
+	openImg4 = new Image;   
+	closeImg4 = new Image;
+	openImg1.src = "/lib/skin/basic/img/icon/folder_icon_minus.gif";
+	closeImg1.src = "/lib/skin/basic/img/icon/folder_icon_plus.gif";
+	openImg2.src = "/lib/skin/basic/img/icon/folder_icon01_open.png";
+	closeImg2.src = "/lib/skin/basic/img/icon/folder_icon01_close.png";
+	openImg3.src = "/lib/skin/basic/img/icon/folder_icon02_open.png";
+	closeImg3.src = "/lib/skin/basic/img/icon/folder_icon02_close.png";
+	openImg4.src = "/lib/skin/basic/img/icon/folder_icon03_open.png";
+	closeImg4.src = "/lib/skin/basic/img/icon/folder_icon03_close.png";
+
+
+ $( document ).ready(function() {
+    $("[id^=Elanlar]").addClass("fas fa-clipboard-list");
+	$("#Şəxsiməlumatı").attr("class", "fas fa-user-check");
+	$("#Dərscədvəli").attr("class", "fas fa-calendar-alt");
+	$("#Qeydiyyatıntarixi").attr("class", "fas fa-clipboard-list");
+	$("#Müvəffəqiyyət").attr("class", "fas fa-user-graduate");
+	$("#Arayışlar").attr("class", "fas fa-newspaper");
+	$("[id^=Transkript]").addClass("fas fa-list-alt");
+	$("#yekunmuv").attr("class", "fas fa-list-ul");
+});
+
+function viewMenu(num1, num2, num3, which1, which2) {
+	switch(num1) {
+		case '0i' :
+		break;
+		case '1i' :
+		break;
+		case '2i' :
+		break;
+		case '3i' :
+			switch(num2) {
+				case 'nj' :
+					if(menu3i0j.style.display=='none') {
+						menu3i0j.style.display='';
+						document.getElementById(which1).src=openImg1.src;
+						document.getElementById(which2).src=openImg2.src;
+					}
+					else {
+						if(document.getElementById('menu3i0j0k') && document.getElementById('menu3i0j0k').style.display == '') viewMenu('3i', '0j', 'nk', 'menu3i0jsign', 'menu3i0jsign2');
+						menu3i0j.style.display='none';
+						document.getElementById(which1).src=closeImg1.src;
+						document.getElementById(which2).src=closeImg2.src;
+					}
+					break;
+				case '0j' :
+				break;
+			}
+		break;
+		case '4i' :
+		break;
+		case '5i' :
+		break;
+		case '6i' :
+			if(menu6i0j.style.display=='none') {
+				menu6i0j.style.display='';
+				menu6i1j.style.display='';
+				menu6i2j.style.display='';
+				menu6i3j.style.display='';
+				menu6i4j.style.display='';
+				document.getElementById(which1).src=openImg1.src;
+				document.getElementById(which2).src=openImg2.src;
+			}
+			else {
+				if(document.getElementById('menu6i0j0k') && document.getElementById('menu6i0j0k').style.display == '') viewMenu('6i', '0j', 'nk', 'menu6i0jsign', 'menu6i0jsign2');
+				menu6i0j.style.display='none';
+				if(document.getElementById('menu6i1j0k') && document.getElementById('menu6i1j0k').style.display == '') viewMenu('6i', '1j', 'nk', 'menu6i1jsign', 'menu6i1jsign2');
+				menu6i1j.style.display='none';
+				if(document.getElementById('menu6i2j0k') && document.getElementById('menu6i2j0k').style.display == '') viewMenu('6i', '2j', 'nk', 'menu6i2jsign', 'menu6i2jsign2');
+				menu6i2j.style.display='none';
+				if(document.getElementById('menu6i3j0k') && document.getElementById('menu6i3j0k').style.display == '') viewMenu('6i', '3j', 'nk', 'menu6i3jsign', 'menu6i3jsign2');
+				menu6i3j.style.display='none';
+				if(document.getElementById('menu6i4j0k') && document.getElementById('menu6i4j0k').style.display == '') viewMenu('6i', '4j', 'nk', 'menu6i4jsign', 'menu6i4jsign2');
+				menu6i4j.style.display='none';
+				document.getElementById(which1).src=closeImg1.src;
+				document.getElementById(which2).src=closeImg2.src;
+			}
+		break;
+	}
+}
+
+
+</script>
+
+
+
+<style>
+	.side-menu {
+		background-color: #1a1c42!important;
+	}
+
+	#sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a:focus, #sidebar-menu > ul > li > a:active {
+		background-color: #2c2f6a!important;
+	}
+
+	.metismenu {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.nav-second-level li a:hover, .nav-thrid-level li a:hover {
+		background-color: #2c2f6a!important;
+	}
+
+	.nav-second-level li a:focus, .nav-thrid-level li a:focus {
+		background-color: #2c2f6a!important;
+	 }
+
+</style>
+
+
+	
+	<style>
+      .custom-sidebar {
+		font-family: Arial, Helvetica, sans-serif;
+        height: 100%;
+        width: 70%;
+        position: fixed;
+        top: 0;
+        left: -70%;
+        background-color: #1a1c42 !important;
+        overflow-x: hidden;
+        transition: 0.5s;
+      /*   padding-top: 60px; */
+        z-index: 1000;
+      }
+
+	  .custom-sidebar div { 
+		font-family: Arial, Helvetica, sans-serif;
+	  }
+
+      .custom-sidebar ul {
+        list-style-type: none; /* Liste markerlarını kaldırır */
+      }
+
+	  .custom-ul {
+		padding: 10px;
+	  }
+
+      .custom-sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+		display: flex!important;
+        font-size: 15px;
+        color: #f1f1f1;
+        display: block;
+        transition: 0.3s;
+        border-radius: 10px; /* Kenarları yuvarlattık */
+        margin-bottom: 10px; /* List item'lar arasında boşluk bıraktık */
+      }
+
+	  .li-content {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		font-size: 15px;
+		color: #f1f1f1;
+	  }
+
+      .custom-sidebar a:hover, .custom-sidebar .active {
+        color: #f1f1f1;
+        background-color: #2c2f6a; /* Hover efekti */
+      }
+
+      .custom-sidebar button {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+	  .custom-sidebar i {
+		width: 25px;
+		margin-right: 7px;
+		display: flex;
+		justify-content: center;
+		font-size: 17px;
+	  }
+
+     
+
+      .custom-overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow-x: hidden;
+      }
+
+      .custom-overlay-active {
+        width: 70%;
+      }
+
+	  #closeSidebar {
+		display: none;
+	  }
+
+	   /* Yeni eklenen stil */
+  .custom-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+
+  .custom-submenu-toggle .fas.fa-angle-left {
+	transition: 0.5s;
+  }
+
+  .custom-sidebar ul ul {
+    padding-left: 20px; /* İkincil menüyü biraz kaydır */
+  }
+
+  .sidebar-header {
+	width: 100%;
+	height: 70px;
+	/* background-color: white; */
+	border-bottom: 1px solid #2c2f6a;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-span {
+	width: 100%;
+  }
+
+  .custom-submenu-open .fas.fa-angle-left {
+  transform: rotate(-90deg);
+}
+
+.custom-submenu a:hover, .custom-submenu .active {
+	background-color: #f1f1f1!important;
+	color: #333;
+}
+
+.custom-overflow {
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+		.side-menu {
+			display: none;
+		}
+	}
+
+	
+@media (min-width: 768px) {
+		.custom-sidebar, .custom-overlay {
+			display: none;
+		}
+		.custom-overflow {
+	overflow: auto;
+}
+	}
+
+
+    </style>
+
+
+<div class="custom-sidebar">
+	<div class="sidebar-header">
+		<img src="/lib/new_style/images/logo.png" alt="" height="42">
+	</div>
+	<button id="closeSidebar">Close</button>
+
+	
+
+	<!-- Sidebar Content -->
+	<ul class="custom-ul">
+
+
+						
+					<li>
+												<a href="/studies/notice.php" data-pjax>
+							<i id="Elanlar"></i><!-- <span class="menu-arrow"></span> --> <span class="custom-span"> Elanlar </span>
+						</a>
+					</li>
+				
+							
+					<li>
+												<a href="/telebe/info/student_view.php" data-pjax>
+							<i id="Şəxsiməlumatı"></i><!-- <span class="menu-arrow"></span> --> <span class="custom-span"> Şəxsi məlumatı </span>
+						</a>
+					</li>
+				
+							
+					<li>
+												<a href="/studies/lecture_time.php" data-pjax>
+							<i id="Dərscədvəli"></i><!-- <span class="menu-arrow"></span> --> <span class="custom-span"> Dərs cədvəli </span>
+						</a>
+					</li>
+				
+							
+					<li>
+												<a href="/telebe/score_view.php" data-pjax>
+							<i id="Transkript"></i><!-- <span class="menu-arrow"></span> --> <span class="custom-span"> Transkript </span>
+						</a>
+					</li>
+				
+							
+			
+			<li>
+				
+				<a href="#" id="fenler" class="custom-submenu-toggle"><i class="fas fa-book-open"></i>
+					<div class="li-content">
+						<span>Fənlər</span>
+						<i class="right fas fa-angle-left"></i>
+						<!-- <span class="badge badge-danger float-right">4</span> -->
+					</div>
+				</a>
+				<!-- Alt menü -->
+				<ul class="custom-submenu">
+
+					
+						<li><a href="/studies/index.php?sem_cd=20242&lec_open_idx=59692" data-pjax>Avtomatik idarəetmə nəzəriyyəsi </a></li>
+					
+						<li><a href="/studies/index.php?sem_cd=20242&lec_open_idx=59693" data-pjax>İntellektual idarəetmə sistemlərinin əsasları </a></li>
+					
+						<li><a href="/studies/index.php?sem_cd=20242&lec_open_idx=59679" data-pjax>Mülki müdafiə </a></li>
+					
+						<li><a href="/studies/index.php?sem_cd=20242&lec_open_idx=59678" data-pjax>Rəqəmsal elektronika </a></li>
+					
+						<li><a href="/studies/index.php?sem_cd=20242&lec_open_idx=59680" data-pjax>Texniki xarici dil </a></li>
+									</ul>
+				<!-- Alt menü bitiş -->
+			</li>
+		
+
+	</ul>
+</div>
+
+
+
+
+    <div class="custom-overlay"></div>
+    <script>
+      document
+        .querySelector(".custom-openSidebar")
+        .addEventListener("click", function () {
+          document.querySelector(".custom-sidebar").style.left = "0";
+          document.querySelector(".custom-overlay").style.width = "100%";
+		  $('body').addClass('custom-overflow');
+        });
+
+      document
+        .getElementById("closeSidebar")
+        .addEventListener("click", function () {
+          document.querySelector(".custom-sidebar").style.left = "-70%";
+          document.querySelector(".custom-overlay").style.width = "0";
+		  $('body').removeClass('custom-overflow');
+        });
+
+      document
+        .querySelector(".custom-overlay")
+        .addEventListener("click", function () {
+          document.querySelector(".custom-sidebar").style.left = "-70%";
+          document.querySelector(".custom-overlay").style.width = "0";
+		  $('body').removeClass('custom-overflow');
+        });
+
+		$(document).on('pjax:start', function() {
+    // Sidebar'ı güncelle
+	document.querySelector(".custom-sidebar").style.left = "-70%";
+          document.querySelector(".custom-overlay").style.width = "0";
+		  $('body').removeClass('custom-overflow');
+		});
+
+
+
+
+		
+		// Pjax işlemi başladığında
+$(document).on('pjax:start', function() {
+    // Sidebar'ı güncelle
+    document.querySelector(".custom-sidebar").style.left = "-70%";
+    document.querySelector(".custom-overlay").style.width = "0";
+});
+
+// Pjax işlemi başladığında
+$(document).on('pjax:success', function(event) {
+    var url = event.target.URL; // veya event.target.location.href
+    // Şimdi URL'yi kullanabilirsiniz
+
+    $(document).ready(function() {
+        var currentURL = window.location.href;
+        //console.log("Şu anki URL: " + currentURL);
+
+        // Sidebar'daki linklerin URL'lerini al ve kontrol et
+        $('.custom-sidebar a').each(function() {
+            var linkURL = $(this).attr('href');
+            var params = new URLSearchParams(linkURL);
+            if (params.has('lec_open_idx')) {
+                // Eğer user_id parametresi varsa, onun değerini kontrol et
+                var userId = params.get('lec_open_idx');
+                if (currentURL.indexOf('lec_open_idx=' + userId) !== -1) {
+                    $(this).addClass('active'); // Eşleşen link'e 'active' sınıfını ekle
+					$('#fenler').addClass('active');
+					
+					initializeSubmenuToggle()
+					
+                } else {
+                    $(this).removeClass('active'); // Eşleşmeyen link'ten 'active' sınıfını kaldır
+                }
+            } 
+			
+			else {
+             
+
+
+            if (currentURL.indexOf(linkURL) !== -1) {
+                $(this).addClass('active'); // Eşleşen link'e 'active' sınıfını ekle
+            } else {
+                $(this).removeClass('active'); // Eşleşmeyen link'ten 'active' sınıfını kaldır
+            }
+        
+
+
+
+            }
+
+
+        });
+
+    });
+
+
+
+
+	
+});
+let isSubmenuOpen = false;
+
+function openSubmenu(item) {
+  const submenu = item.nextElementSibling;
+  item.classList.add('custom-submenu-open');
+  submenu.style.maxHeight = submenu.scrollHeight + "px";
+  isSubmenuOpen = true;
+}
+
+function closeSubmenu(item) {
+  const submenu = item.nextElementSibling;
+  item.classList.remove('custom-submenu-open');
+  submenu.style.maxHeight = null;
+  isSubmenuOpen = false;
+}
+
+function toggleSubmenu(item) {
+  if (item.classList.contains('custom-submenu-open')) {
+    closeSubmenu(item);
+  } else {
+    openSubmenu(item);
+  }
+}
+
+function initializeSubmenuToggle() {
+  document.querySelectorAll('.custom-submenu-toggle.active').forEach(item => {
+    openSubmenu(item);
+  });
+
+  document.querySelectorAll('.custom-submenu-toggle').forEach(item => {
+    item.addEventListener('click', function() {
+      toggleSubmenu(this);
+    });
+  });
+
+  
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  initializeSubmenuToggle();
+});
+
+document.addEventListener('pjax:start', function() {
+  if (isSubmenuOpen) {
+    closeSubmenu(document.querySelector('.custom-submenu-toggle.custom-submenu-open'));
+  }
+});
+
+
+
+
+    </script>
+
+	
+
+
+
+<div class="left side-menu " >
+<div class="slimscroll-menu" id="remove-scroll">
+
+<!--- Sidemenu -->
+<div id="sidebar-menu">
+<!-- Left Menu Start -->
+
+<ul  class="metismenu " id="side-menu">
+
+
+                    
+					<li id="menu0i">
+												<a href="/studies/notice.php" data-pjax>
+						<i id="Elanlar" ></i><!-- <span class="menu-arrow"></span> --> <span> Elanlar </span>
+						</a>
+					</li>
+		
+                    
+					<li id="menu1i">
+												<a href="/telebe/info/student_view.php" data-pjax>
+						<i id="Şəxsiməlumatı" ></i><!-- <span class="menu-arrow"></span> --> <span> Şəxsi məlumatı </span>
+						</a>
+					</li>
+		
+                    
+					<li id="menu2i">
+												<a href="/studies/lecture_time.php" data-pjax>
+						<i id="Dərscədvəli" ></i><!-- <span class="menu-arrow"></span> --> <span> Dərs cədvəli </span>
+						</a>
+					</li>
+		
+
+
+					<!-- <li  id="menu3i" > 
+						<a href="javascript: void(0);">
+						<i class="text-danger" id="Qeydiyyatıntarixi" ></i> <span class="fas fa-angle-down"></span> <span> Qeydiyyatın tarixi </span>
+						</a>
+						
+					
+
+					<ul class="nav-second-level" aria-expanded=false>
+					
+										<li id="menu3i0j"><a data-pjax href="/telebe/lecture_attend.php">Qeydiyyatın tarixi siyahısı</a></li>
+
+
+				</ul>
+				</li> -->
+				                    
+					<li id="menu4i">
+												<a href="/telebe/score_view.php" data-pjax>
+						<i id="Transkript" ></i><!-- <span class="menu-arrow"></span> --> <span> Transkript </span>
+						</a>
+					</li>
+		
+                    
+
+
+
+
+
+<!-- <li>
+	<a href="http://sap.aztu.edu.az/telebe/student_score_view.php" data-pjax>
+		<i id="yekunmuv" ></i><span class="menu-arrow"></span> <span>Yekun Müvəffəqiyyət</span>
+	</a>
+</li> -->
+
+
+
+	
+
+				<li id="menu6i">
+					<a href="javascript: void(0);">
+					<i class="fas fa-book-open"></i>  <span class="badge badge-danger float-right">5</span>  <span> Fənlər <span class="fas fa-angle-down"></span> </span>
+					</a>
+					
+
+				
+
+
+<ul class="nav-second-level" aria-expanded=false>
+
+
+				<li><a style="font-size: 13.5px" href="/studies/index.php?sem_cd=20242&lec_open_idx=59692&lecture_name=Avtomatik idarəetmə nəzəriyyəsi[272a2]" data-pjax>Avtomatik idarəetmə nəzəriyyəsi </a></li>
+
+
+
+				<li><a style="font-size: 13.5px" href="/studies/index.php?sem_cd=20242&lec_open_idx=59693&lecture_name=İntellektual idarəetmə sistemlərinin əsasları[272a2]" data-pjax>İntellektual idarəetmə sistemlərinin əsasları </a></li>
+
+
+
+				<li><a style="font-size: 13.5px" href="/studies/index.php?sem_cd=20242&lec_open_idx=59679&lecture_name=Mülki müdafiə[272a2]" data-pjax>Mülki müdafiə </a></li>
+
+
+
+				<li><a style="font-size: 13.5px" href="/studies/index.php?sem_cd=20242&lec_open_idx=59678&lecture_name=Rəqəmsal elektronika[272a2]" data-pjax>Rəqəmsal elektronika </a></li>
+
+
+
+				<li><a style="font-size: 13.5px" href="/studies/index.php?sem_cd=20242&lec_open_idx=59680&lecture_name=Texniki xarici dil[272a2]" data-pjax>Texniki xarici dil </a></li>
+
+ </ul> 
+		 </li>
+		
+
+</ul>
+
+</div>
+<!-- Sidebar -->
+<div class="clearfix"></div>
+
+</div>
+<!-- Sidebar -left -->
+
+</div>
+
+        <!-- Left Sidebar End -->
+
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <!-- LOADER -->
+
+       <!--  <div id="loader" class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div> -->
+
+        <div id="loader">
+       
+        <div class="loader-content">
+            <div>
+        <img src="/lib/new_style/images/logo.png" alt="" height="42">
+            </div>
+        <div class="loader"></div>
+        </div>
+        
+        </div>
+
+        <style>
+            /* HTML: <div class="loader"></div> */
+
+            #loader {
+                position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .loader-content {
+                margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+            }
+
+.loader {
+  height: 4px;
+  width: 130px;
+  --c:no-repeat linear-gradient(#2c2f6a 0 0);
+  background: var(--c),var(--c),#ededed;
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
+}
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
+        </style>
+
+
+        <!-- END LOADER -->
+        <br>
+        <div id="main_content" class="content-page">
+            <!-- Start content -->
+
+            <!-- calling other pages here -->
+
+
+
+        </div> <!-- End content -->
+
+        <footer class="footer text-right">
+            2013 - 2018 © Azərbaycan Texniki Universiteti. Bütün Hüquqlar qorunur.
+
+        </footer>
+
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- End Right content here -->
+    <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+
+
+
+    <!-- Counter js  -->
+    <script src="https://coderthemes.com/velonic/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="https://coderthemes.com/velonic/plugins/counterup/jquery.counterup.min.js"></script>
+
+    <!-- sparkline -->
+    <script src="https://coderthemes.com/velonic/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- sweet alerts -->
+    <script src="/lib/new_style/js/sweetalert2.min.js"></script>
+
+
+    <!--Morris Chart-->
+    <script src="https://coderthemes.com/velonic/plugins/morris/morris.min.js"></script>
+    <!-- <script src="https://coderthemes.com/velonic/plugins/raphael/raphael-min.js"></script> -->
+    <script src="/lib/new_style/plugins/raphael-min.js"></script>
+
+
+    <!-- Chat -->
+    <script src="/lib/new_style/pages/jquery.chat.js"></script>
+
+    <!-- Dashboard -->
+    <script src="/lib/new_style/pages/jquery.dashboard.js"></script>
+
+    <!-- Todoapp -->
+    <script src="/lib/new_style/pages/jquery.todo.js"></script>
+
+
+    <!-- Required datatable js -->
+    <script src="/lib/new_style/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/lib/new_style/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="/lib/new_style/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="/lib/new_style/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <!-- <script src="/lib/new_style/plugins/datatables/jszip.min.js"></script> -->
+    <script src="/lib/new_style/plugins/datatables/pdfmake.min.js"></script>
+    <script src="/lib/new_style/plugins/datatables/vfs_fonts.js"></script>
+    <script src="/lib/new_style/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="/lib/new_style/plugins/datatables/buttons.print.min.js"></script>
+    <script src="/lib/new_style/plugins/datatables/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="/lib/new_style/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="/lib/new_style/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+
+    <!-- App js -->
+    <script src="/lib/new_style/js/jquery.core.js"></script>
+    <script src="/lib/new_style/js/jquery.app.js"></script>
+
+    <script type="text/javascript">
+        function detectmob() {
+            if (navigator.userAgent.match(/Android/i) ||
+                navigator.userAgent.match(/webOS/i) ||
+                navigator.userAgent.match(/iPhone/i) ||
+                navigator.userAgent.match(/iPad/i) ||
+                navigator.userAgent.match(/iPod/i) ||
+                navigator.userAgent.match(/BlackBerry/i) ||
+                navigator.userAgent.match(/Windows Phone/i)
+            ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        moment.locale("az");
+
+        $(document).ready(function() {
+
+
+
+
+            $(document).pjax('a[data-pjax]', '#main_content');
+            $(document).pjax('a[data-pjax2]', '#secondary_content');
+            $(document).on('pjax:start', function() {
+                $("#loader").show();
+
+            });
+
+            $(document).on('pjax:end', function() {
+                $("#loader").hide();
+                // if(detectmob){
+                //          $(".open-left").click();
+                //     }
+            });
+            $(document).on('pjax:timeout', function(event) {
+                // Prevent default timeout redirection behavior
+                event.preventDefault();
+            });
+            $(document).on('pjax:popstate', function() {
+                var pathname = window.location.href;
+                $(".bg-pink").removeClass('bg-pink').addClass('bg-primary');
+                $(".widget-panel.widget-style-2").each(function() {
+                    var hrefString = $($($(this).children("h6")[0]).children("a" [0])).attr("href");
+                    if (pathname.includes(hrefString)) {
+                        $(this).removeClass('bg-primary');
+                        $(this).addClass('bg-pink');
+                    }
+
+                });
+
+            });
+        });
+
+
+        function go_to_main_page(url) {
+            $.pjax({
+                url: url,
+                container: "#main_content"
+            });
+        }
+
+        go_to_main_page("/studies/notice.php");
+
+
+        go_to_main_page("/studies/index.php?lec_open_idx=59692&lecture_code=1834&sem_code=20242")    </script>
+
+
+    <script type="text/javascript">
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
